@@ -47,14 +47,14 @@ const VideoGridItem = ({
 
   return (
     <div
-      className="flex flex-col gap-2"
+      className="flex flex-col gap-2 max-sm:w-60"
       onMouseEnter={() => setVideoPlaying(true)}
       onMouseLeave={() => setVideoPlaying(false)}
     >
-      <a href={`/watch?v${id}`} className="relative aspect-video">
+      <a href={`/watch?v=${id}`} className="relative aspect-video">
         <img
           src={thumbnailUrl}
-          className={`block w-full h-full object-cover rounded-xl transition-[border-radius] duration-200 ${
+          className={`block w-full h-full object-cover transition-[border-radius] duration-200 ${
             videoPlaying ? "rounded-none" : "rounded-xl"
           }`}
         />
@@ -62,18 +62,21 @@ const VideoGridItem = ({
           {formatDuration(duration)}
         </div>
         <video
+          className={`block h-full object-cover absolute inset-0 transition-opacity duration-200 ${
+            videoPlaying ? "opacity-100 delay-200" : "opacity-0"
+          }`}
           ref={videoRef}
           muted
           playsInline
           src={videoUrl}
-          className={`block h-full object-cover absolute inset-0 transition-opacity duration-200  ${
-            videoPlaying ? "opacity-100 delay-200" : "opacity-0 "
-          }`}
         />
       </a>
       <div className="flex gap-2">
         <a href={`/@${channel.id}`} className="flex-shrink-0">
-          <img className="w-12 h-12 rounded-full" src={channel.profileUrl} />
+          <img
+            className="w-12 h-12 rounded-full max-sm:w-8 max-sm:h-8"
+            src={channel.profileUrl}
+          />
         </a>
         <div className="flex flex-col">
           <a href={`/watch?v=${id}`} className="font-bold">

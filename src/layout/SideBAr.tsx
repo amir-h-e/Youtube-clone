@@ -178,11 +178,11 @@ function SmallSidebarItem({ Icon, title, url }: SmallSidebarItemProps) {
       href={url}
       className={twMerge(
         buttonStyles({ variant: "ghost" }),
-        "py-4 px-1 flex flex-col items-center rounded-lg gap-1"
+        "py-4 px-1 flex flex-col items-center rounded-lg gap-1 "
       )}
     >
-      <Icon className="w-6 h-6" />
-      <div className="text-sm">{title}</div>
+      <Icon className="w-6 h-6 max-sm:w-5 max-sm:h-5" />
+      <div className="text-sm max-sm:text-xs ">{title}</div>
     </a>
   );
 }

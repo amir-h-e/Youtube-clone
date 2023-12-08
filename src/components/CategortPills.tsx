@@ -43,7 +43,7 @@ const CategortPills = ({
 
   return (
     <div
-      className="overflow-x-hidden overflow-y-hidden relative"
+      className="overflow-x-hidden overflow-y-hidden relative "
       ref={containerRef}
     >
       <div
@@ -55,17 +55,17 @@ const CategortPills = ({
             key={category}
             onClick={() => onSelect(category)}
             variant={selectedCategory === category ? "dark" : "default"}
-            className="py-1 px-3 rounded-lg whitespace-nowrap"
+            className="py-1 px-3 rounded-lg whitespace-nowrap max-sm:text-xs max-sm:px-2"
           >
             {category}
           </Button>
         ))}
       </div>
       {isLeftVisible && (
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full">
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-gradient-to-r from-white from-50% to-transparent w-24 h-full max-sm:w-20">
           <Button
             variant="ghost"
-            className="h-full aspect-square w-auto p-1.5"
+            className="h-full aspect-square w-auto p-1.5 max-sm:p-0"
             onClick={() => {
               setTranslate((translate) => {
                 const newTranslate = translate - TRANSLATE_AMOUNT;
@@ -82,7 +82,7 @@ const CategortPills = ({
         <div className="absolute top-1/2 right-0 -translate-y-1/2 bg-gradient-to-l from-white from-50% to-transparent w-24 h-full flex justify-end">
           <Button
             variant="ghost"
-            className="h-full aspect-square w-auto p-1.5"
+            className="h-full aspect-square w-auto p-1.5 max-sm:p-0"
             onClick={() => {
               setTranslate((translate) => {
                 if (containerRef.current == null) return translate;

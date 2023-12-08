@@ -7,7 +7,7 @@ import { useSidebarContext } from "../contexts/SidebarContext";
 export const PageHeader = () => {
   const [showFullWidthSearch, setShowFullWidthSearch] = useState(false);
   return (
-    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4">
+    <div className="flex gap-10 lg:gap-20 justify-between pt-2 mb-6 mx-4 ">
       <PageHeaderFirstSection hidden={showFullWidthSearch} />
       <form
         className={` gap-4 flex-grow justify-center ${
