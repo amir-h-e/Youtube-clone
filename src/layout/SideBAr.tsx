@@ -40,13 +40,13 @@ const SideBAr = () => {
         }`}
       >
         <SmallSidebarItem Icon={Home} title="Home" url="/" />
-        <SmallSidebarItem Icon={Repeat} title="Shorts" url="/shorts" />
+        <SmallSidebarItem Icon={Repeat} title="Shorts" url="/" />
         <SmallSidebarItem
           Icon={Clapperboard}
           title="Subscriptions"
           url="/subscriptions"
         />
-        <SmallSidebarItem Icon={Library} title="Library" url="/library" />
+        <SmallSidebarItem Icon={Library} title="Library" url="/" />
       </aside>
       {isSmallOpen && (
         <div
@@ -124,19 +124,19 @@ const SideBAr = () => {
             title="Shopping"
             url="/shopping"
           />
-          <LargeSidebarItem IconOrImgUrl={Music2} title="Music" url="/music" />
+          <LargeSidebarItem IconOrImgUrl={Music2} title="Music" url="/" />
           <LargeSidebarItem
             IconOrImgUrl={Film}
             title="Movies & TV"
             url="/movies-tv"
           />
-          <LargeSidebarItem IconOrImgUrl={Radio} title="Live" url="/live" />
+          <LargeSidebarItem IconOrImgUrl={Radio} title="Live" url="/" />
           <LargeSidebarItem
             IconOrImgUrl={Gamepad2}
             title="Gaming"
             url="/gaming"
           />
-          <LargeSidebarItem IconOrImgUrl={Newspaper} title="News" url="/news" />
+          <LargeSidebarItem IconOrImgUrl={Newspaper} title="News" url="/" />
           <LargeSidebarItem
             IconOrImgUrl={Trophy}
             title="Sports"
