@@ -52,16 +52,16 @@ export const PageHeader = () => {
         >
           <Search />
         </Button>
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button variant="ghost" size="icon" className="md:hidden max-sm:hidden">
           <Mic />
         </Button>
         <Button variant="ghost" size="icon">
           <Upload />
         </Button>
-        <Button variant="ghost" size="icon">
+        <Button className="max-sm:hidden " variant="ghost" size="icon">
           <Bell />
         </Button>
-        <Button variant="ghost" size="icon">
+        <Button className="max-sm:hidden" variant="ghost" size="icon">
           <User />
         </Button>
       </div>

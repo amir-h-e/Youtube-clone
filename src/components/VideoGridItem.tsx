@@ -72,17 +72,17 @@ const VideoGridItem = ({
         />
       </a>
       <div className="flex gap-2">
-        <a href={`/@${channel.id}`} className="flex-shrink-0">
+        <a href="/" className="flex-shrink-0">
           <img
             className="w-12 h-12 rounded-full max-sm:w-8 max-sm:h-8"
             src={channel.profileUrl}
           />
         </a>
         <div className="flex flex-col">
-          <a href={`/watch?v=${id}`} className="font-bold">
+          <a href="/" className="font-bold">
             {title}
           </a>
-          <a href={`/@${channel.id}`} className="text-secondary-text text-sm">
+          <a href="/" className="text-secondary-text text-sm">
             {channel.name}
           </a>
           <div className="text-secondary-text text-sm">
